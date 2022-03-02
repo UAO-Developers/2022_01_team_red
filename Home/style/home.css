@@ -1,0 +1,18 @@
+.container-fluid{
+    background-color: rgb(31, 146, 31);
+}
+body{
+    font-family: sans-serif;
+}
+.navbar-brand{
+    color:white;
+    font-size:bold;
+    padding: 8px 12px;
+}
+.nav-link{
+    color: white;
+}
+.navbar-brand:hover{
+    background-color: rgb(83, 204, 83);
+    transition: 0.5s;
+}
