@@ -1,0 +1,23 @@
+<div class="row">
+    {{#each notes}}
+    <pre></pre>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                
+                <h4 class="card-title d-flex justify-content-between -align-items-center">{{title}}
+                    
+                    <a href="/notes/edit/{{_id}}"><p class="small">editar</p></a>
+                </h4>
+                <p>{{description}}</p>
+                <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                
+                <img src="./img/card01.jpg" class="card-img-top p-1" alt="...">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger btn-block btn-sm">Borrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

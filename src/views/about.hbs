@@ -1,0 +1,45 @@
+<section class="card">
+    <div class="card-body">
+        <h1>Acerca de nosotros</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem placeat ex praesentium incidunt repellat ea obcaecati minus illo corrupti minima numquam voluptas omnis, sit voluptatibus ipsum necessitatibus recusandae molestiae! Ut?</p>
+    </div>
+</section>
+<div class="col-md mx-auto">
+    <div class="card text-center">
+        <div class="card-header">
+            <h3>Nueva Opinion</h3>
+        </div>
+
+    </div>
+    <div class="card-body">
+        <form action="about" method="POST">
+            <div class="form-group">
+                <input type="text" name="title" class="form-control" placeholder="Titulo" autofocus>
+            </div>
+            <div class="form-group">
+                <textarea name="description" rows="10" placeholder="Descripcion" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block">
+                    Envia tu comentario!
+                </button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<div class="row">
+    {{#each Opinion}}
+    <pre></pre>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title d-flex justify-content-between -align-items-center">{{title}}
+                </h4>
+                <p>{{description}}</p>
+                
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
